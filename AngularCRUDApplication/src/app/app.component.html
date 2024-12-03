@@ -1,0 +1,57 @@
+<style>
+  .toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    justify-content: space-between; /* Alinha itens nas extremidades */
+    align-items: center;
+    background-color: #333237;
+    color: white;
+    font-weight: 600;
+    padding: 0 20px; /* Margem lateral */
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+  }
+
+  .toolbar i {
+    cursor: pointer;
+    margin-right: 10px; /* Espaço entre ícone e texto */
+    font-size: 1.2rem;
+  }
+
+  .toolbar .left-section,
+  .toolbar .right-section {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+  }
+
+  .toolbar .right-section {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+
+  .toolbar .employee {
+    display: flex;
+    align-items: center; /* Alinha ícone com o texto */
+    gap: 10px; /* Espaçamento entre ícone e texto */
+  }
+</style>
+
+<nav class="navbar fixed-top navbar-expand-md navbar-light white double-nav scrolling-navbar">
+  <div class="toolbar" role="banner">
+    <!-- Seção esquerda -->
+    <div class="left-section">
+      <h4><i class='fas fa-home' (click)="HomeClick()"></i></h4>
+    </div>
+
+    <!-- Seção direita -->
+    <div class="right-section">
+      <span class="employee">
+        <i class='fas fa-user'></i> <b>Gerenciar Funcionário</b>
+      </span>
+    </div>
+  </div>
+</nav>
+<router-outlet></router-outlet>
